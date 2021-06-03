@@ -10,3 +10,5 @@ runs:
 inputs:
   kubeconfig:
     description: 'base64 encoded .kube/config'
+  workdir:
+    description: 'working directory'
