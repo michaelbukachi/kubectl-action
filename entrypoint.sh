@@ -6,5 +6,10 @@ set -e
 mkdir -p ~/.kube
 echo $INPUT_KUBECONFIG | base64 -d > ~/.kube/config
 
+if [[ -z "${INPUT_WORKDIR}" ]]; then
+  cd $INPUT_WORKDIR
+fi
+
+
 # Execute kubectl command
 sh -c "kubectl $*"
