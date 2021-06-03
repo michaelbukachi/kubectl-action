@@ -6,8 +6,8 @@ set -e
 mkdir -p ~/.kube
 echo $INPUT_KUBECONFIG | base64 -d > ~/.kube/config
 
-if [[ -z "${INPUT_WORKDIR}" ]]; then
-  cd $INPUT_WORKDIR
+if [[ -z "${WORKDIR}" ]]; then
+  cd $WORKDIR
 fi
 
 
